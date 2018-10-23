@@ -46,8 +46,6 @@
 import VueSocketio from 'vue-socket.io';
 import socketio from 'socket.io-client';
 import Vue from 'vue';
-import JParticles from 'jparticles';
-new JParticles.particle('#app');
 
 Vue.use(VueSocketio, socketio('https://socketio.dovolopor.com'));
 
@@ -68,7 +66,7 @@ export default {
       questionMessage: "",
       messageList:[
         {user: 1, msg: "你好！"},
-        {user: 0, msg: "你好啊，来和我聊聊关于自然语言处理吧？"}
+        {user: 0, msg: "你好啊，来和我聊聊天？"}
       ]
     }
   },

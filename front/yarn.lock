@@ -3979,10 +3979,6 @@ joi@^13.0.0:
     isemail "3.x.x"
     topo "3.x.x"
 
-jparticles@^2.0.1:
-  version "2.0.1"
-  resolved "http://registry.npm.taobao.org/jparticles/download/jparticles-2.0.1.tgz#e5a3cf0edb1b1c204662cead7bc5043ee186b567"
-
 js-calendar@^1.2.3:
   version "1.2.3"
   resolved "http://registry.npm.taobao.org/js-calendar/download/js-calendar-1.2.3.tgz#a583b0644b4e695ba394f344d103dbcc7a7a7d3e"
