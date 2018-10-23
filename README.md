@@ -12,3 +12,16 @@
 ├── bot
 └── front
 ```
+
+## 安装
+
+```shell
+git clone https://github.com/kinggreenhall/chatbot.git
+# 启动前端
+cd chatbot/front
+yarn
+yarn serve
+# 启动后端
+cd ../back
+python server.py
+```
