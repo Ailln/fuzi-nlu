@@ -66,15 +66,21 @@ export default {
       questionMessage: "",
       messageList:[
         {user: 1, msg: "你好！"},
-        {user: 0, msg: "你好啊，来和我聊聊天？"}
+        {user: 0, msg: "你好啊，来和我聊聊天吧？"}
       ]
     }
   },
   methods: {
     sendQuestionMessage () {
-      this.messageList.push({user: 1, msg: this.questionMessage})
-      this.$socket.emit('receive', this.questionMessage)
-      this.questionMessage = ""
+      if(this.questionMessage===""){
+        this.$Notice.warning({
+          title: '请输入内容！'
+        });
+      }else {
+        this.messageList.push({user: 1, msg: this.questionMessage})
+        this.$socket.emit('receive', this.questionMessage)
+        this.questionMessage = ""
+      }
     },
     buttonClick () {
       window.open('https://github.com/kinggreenhall/chatbot', 'target', '')
