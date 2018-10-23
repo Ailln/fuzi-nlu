@@ -1,10 +1,28 @@
 <template>
   <div id="app">
-    <Card :bordered="false" id="content">
-        <p slot="title">🤖️ ChatBot</p>
-        <!-- eslint-disable -->
-        <div v-if="this.messageList.length > 9">
-          <Scroll height=410>
+    <div id="github">
+      <Button @click="buttonClick" size="large" shape="circle" icon="logo-github">More in Github</Button>
+    </div>
+
+    <div id="chatbot">
+      <Card :bordered="false" id="content">
+          <p slot="title">🤖️ ChatBot</p>
+          <!-- eslint-disable -->
+          <div v-if="this.messageList.length > 9">
+            <Scroll height=410>
+              <div v-for="messageItem in messageList">
+                <div v-if="messageItem.user">
+                  <Button id="question" type="primary" ghost>{{ messageItem.msg }}</Button>
+                </div>
+                <div v-else>
+                  <Button id="answer" type="primary" ghost>{{ messageItem.msg }}</Button>
+                </div>
+                <br/>
+                <br/>
+              </div>
+            </Scroll>
+          </div>
+          <div v-else>
             <div v-for="messageItem in messageList">
               <div v-if="messageItem.user">
                 <Button id="question" type="primary" ghost>{{ messageItem.msg }}</Button>
@@ -15,23 +33,11 @@
               <br/>
               <br/>
             </div>
-          </Scroll>
-        </div>
-        <div v-else>
-          <div v-for="messageItem in messageList">
-            <div v-if="messageItem.user">
-              <Button id="question" type="primary" ghost>{{ messageItem.msg }}</Button>
-            </div>
-            <div v-else>
-              <Button id="answer" type="primary" ghost>{{ messageItem.msg }}</Button>
-            </div>
-            <br/>
-            <br/>
           </div>
-        </div>
-    </Card>
-    <div id="send">
-        <Input v-model="questionMessage" search enter-button="发送" size="large" placeholder="Enter something..." @on-search="sendQuestionMessage"/>
+      </Card>
+      <div id="send">
+          <Input v-model="questionMessage" search enter-button="发送" size="large" placeholder="Enter something..." @on-search="sendQuestionMessage"/>
+      </div>
     </div>
   </div>
 </template>
@@ -40,9 +46,10 @@
 import VueSocketio from 'vue-socket.io';
 import socketio from 'socket.io-client';
 import Vue from 'vue';
+import JParticles from 'jparticles';
+new JParticles.particle('#app');
 
 Vue.use(VueSocketio, socketio('https://socketio.dovolopor.com'));
-
 
 export default {
   sockets:{
@@ -69,6 +76,10 @@ export default {
     sendQuestionMessage () {
       this.messageList.push({user: 1, msg: this.questionMessage})
       this.$socket.emit('receive', this.questionMessage)
+      this.questionMessage = ""
+    },
+    buttonClick () {
+      window.open('https://github.com/kinggreenhall/chatbot', 'target', '')
     }
   }
 }
@@ -76,14 +87,18 @@ export default {
 </script>
 
 <style>
+#github {
+  width: 146px;
+  margin: 40px auto;
+}
 
-#app {
+#chatbot {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin: 100px auto;
+  margin: 40px auto;
   width: 800px;
 }
 
