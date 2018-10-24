@@ -147,17 +147,16 @@ class ConvertUtil(object):
         return train_data_list, validate_data_list, vacab_list
 
     def gen_test_data(self, test_data):
-        print("\n>> start read input vocab...")
+        # print("\n>> start read input vocab...")
         input_vocab = self.get_vocab(self.input_vocab_path, "", False)
-        print(">> start read target vocab...")
+        # print(">> start read target vocab...")
         target_vocab = self.get_vocab(self.target_vocab_path, "", False)
-        print(">> start read intent vocab...")
+        # print(">> start read intent vocab...")
         intent_vocab = self.get_vocab(self.intent_vocab_path, "", False)
 
-        print("\n>> word to id: test...")
+        # print("\n>> word to id: test...")
         test_input_list = self.word2id(input_vocab, [test_data], self.seq_length)
 
         vacab_list = [input_vocab, target_vocab, intent_vocab]
 
         return test_input_list, vacab_list
-
