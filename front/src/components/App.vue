@@ -48,6 +48,7 @@ import socketio from 'socket.io-client';
 import Vue from 'vue';
 
 Vue.use(VueSocketio, socketio('https://socketio.dovolopor.com'));
+// Vue.use(VueSocketio, socketio('http://127.0.0.1:8002'));
 
 export default {
   sockets:{
@@ -66,7 +67,7 @@ export default {
       questionMessage: "",
       messageList:[
         {user: 1, msg: "你好！"},
-        {user: 0, msg: "你好啊，来和我聊聊天吧？"}
+        {user: 0, msg: "你好啊～猜猜我是谁？ (/≥▽≤/)"}
       ]
     }
   },

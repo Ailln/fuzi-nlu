@@ -1,0 +1,19 @@
+embedding_size: 64
+hidden_size: 64
+n_layers: 3
+seq_length: 20
+epoch_size: 100
+batch_size: 1
+learning_rate: 0.001
+
+input_json_path: "./data/train.json"
+input_iob_path: "./data/train.iob"
+train_data_path: "./data/train.iob"
+validate_data_path: "./data/train.iob"
+input_vocab_path: "./data/input.vocab"
+target_vocab_path: "./data/target.vocab"
+intent_vocab_path: "./data/intent.vocab"
+save_dir: "./save/"
+
+run_type: train
+dataset_size: 45

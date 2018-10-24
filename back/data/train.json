@@ -1,0 +1,231 @@
+﻿{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "拜拜",
+        "intent": "bye",
+        "entities": []
+      },
+      {
+        "text": "拜",
+        "intent": "bye",
+        "entities": []
+      },
+      {
+        "text": "再见",
+        "intent": "bye",
+        "entities": []
+      },
+      {
+        "text": "88",
+        "intent": "bye",
+        "entities": []
+      },
+      {
+        "text": "nihao",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "你好",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "您好",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "你好啊",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "Hi",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "hi",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "hello",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "Hello",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "你叫什么？",
+        "intent": "name",
+        "entities": []
+      },
+      {
+        "text": "你叫什么",
+        "intent": "name",
+        "entities": []
+      },
+      {
+        "text": "你是谁？",
+        "intent": "name",
+        "entities": []
+      },
+      {
+        "text": "你是谁",
+        "intent": "name",
+        "entities": []
+      },
+      {
+        "text": "你叫啥？",
+        "intent": "name",
+        "entities": []
+      },
+      {
+        "text": "你是",
+        "intent": "name",
+        "entities": []
+      },
+      {
+        "text": "名字",
+        "intent": "name",
+        "entities": []
+      },
+      {
+        "text": "你的名字?",
+        "intent": "name",
+        "entities": []
+      },
+      {
+        "text": "你叫啥名字",
+        "intent": "name",
+        "entities": []
+      },
+      {
+        "text": "你多大啦？",
+        "intent": "age",
+        "entities": []
+      },
+      {
+        "text": "你几岁？",
+        "intent": "age",
+        "entities": []
+      },
+      {
+        "text": "你几岁啦",
+        "intent": "age",
+        "entities": []
+      },
+      {
+        "text": "你现在几岁",
+        "intent": "age",
+        "entities": []
+      },
+      {
+        "text": "你是男的？",
+        "intent": "sex",
+        "entities": []
+      },
+      {
+        "text": "你是男的",
+        "intent": "sex",
+        "entities": []
+      },
+      {
+        "text": "你是女的",
+        "intent": "sex",
+        "entities": []
+      },
+      {
+        "text": "你的性别？",
+        "intent": "sex",
+        "entities": []
+      },
+      {
+        "text": "你是男还是女",
+        "intent": "sex",
+        "entities": []
+      },
+      {
+        "text": "你爸是谁？",
+        "intent": "parents",
+        "entities": []
+      },
+      {
+        "text": "你爸",
+        "intent": "parents",
+        "entities": []
+      },
+      {
+        "text": "你妈是？",
+        "intent": "parents",
+        "entities": []
+      },
+      {
+        "text": "你妈是",
+        "intent": "parents",
+        "entities": []
+      },
+      {
+        "text": "你父母是谁？",
+        "intent": "parents",
+        "entities": []
+      },
+      {
+        "text": "你爸叫啥？",
+        "intent": "parents",
+        "entities": []
+      },
+      {
+        "text": "你爸爸叫啥？",
+        "intent": "parents",
+        "entities": []
+      },
+      {
+        "text": "你有妈妈吗？",
+        "intent": "parents",
+        "entities": []
+      },
+      {
+        "text": "你能干啥？",
+        "intent": "feature",
+        "entities": []
+      },
+      {
+        "text": "你能干啥",
+        "intent": "feature",
+        "entities": []
+      },
+      {
+        "text": "你能干什么？",
+        "intent": "feature",
+        "entities": []
+      },
+      {
+        "text": "你能干什么",
+        "intent": "feature",
+        "entities": []
+      },
+      {
+        "text": "你可以做什么？",
+        "intent": "feature",
+        "entities": []
+      },
+      {
+        "text": "你可以做啥",
+        "intent": "feature",
+        "entities": []
+      },
+      {
+        "text": "你有什么功能？",
+        "intent": "feature",
+        "entities": []
+      }
+    ]
+  }
+}

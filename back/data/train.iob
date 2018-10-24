@@ -1,0 +1,45 @@
+拜 拜	O O	bye
+拜	O	bye
+再 见	O O	bye
+8 8	O O	bye
+n i h a o	O O O O O	greet
+你 好	O O	greet
+您 好	O O	greet
+你 好 啊	O O O	greet
+H i	O O	greet
+h i	O O	greet
+h e l l o	O O O O O	greet
+H e l l o	O O O O O	greet
+你 叫 什 么 ？	O O O O O	name
+你 叫 什 么	O O O O	name
+你 是 谁 ？	O O O O	name
+你 是 谁	O O O	name
+你 叫 啥 ？	O O O O	name
+你 是	O O	name
+名 字	O O	name
+你 的 名 字 ?	O O O O O	name
+你 叫 啥 名 字	O O O O O	name
+你 多 大 啦 ？	O O O O O	age
+你 几 岁 ？	O O O O	age
+你 几 岁 啦	O O O O	age
+你 现 在 几 岁	O O O O O	age
+你 是 男 的 ？	O O O O O	sex
+你 是 男 的	O O O O	sex
+你 是 女 的	O O O O	sex
+你 的 性 别 ？	O O O O O	sex
+你 是 男 还 是 女	O O O O O O	sex
+你 爸 是 谁 ？	O O O O O	parents
+你 爸	O O	parents
+你 妈 是 ？	O O O O	parents
+你 妈 是	O O O	parents
+你 父 母 是 谁 ？	O O O O O O	parents
+你 爸 叫 啥 ？	O O O O O	parents
+你 爸 爸 叫 啥 ？	O O O O O O	parents
+你 有 妈 妈 吗 ？	O O O O O O	parents
+你 能 干 啥 ？	O O O O O	feature
+你 能 干 啥	O O O O	feature
+你 能 干 什 么 ？	O O O O O O	feature
+你 能 干 什 么	O O O O O	feature
+你 可 以 做 什 么 ？	O O O O O O O	feature
+你 可 以 做 啥	O O O O O	feature
+你 有 什 么 功 能 ？	O O O O O O O	feature

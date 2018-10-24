@@ -1,0 +1,72 @@
+你 好	O O	greeting
+你 好 ！	O O O	greeting
+你 好 啊	O O O	greeting
+h i	O O	greeting
+H i	O O	greeting
+h e l l o	O O O O O	greeting
+H e l l o	O O O O O	greeting
+h i ， g i r l	O O O O O O O	greeting
+h i ， b o y	O O O O O O	greeting
+h e y	O O O	greeting
+早	O	greeting
+早 上 好	O O O	greeting
+中 午 好	O O O	greeting
+晚 上 好	O O O	greeting
+你 好 呀	O O O	greeting
+你 好 啊	O O O	greeting
+哈 啰	O O	greeting
+喂	O	greeting
+在 吗 ？	O O O	greeting
+有 没 有 人 啊	O O O O O	greeting
+在 吼 ？	O O O	greeting
+在 ？	O O	greeting
+在 吗	O O	greeting
+雷 侯	O O	greeting
+嗨 ， 你 好	O O O O	greeting
+嘿 ， 你 好 哇	O O O O O	greeting
+你 好 呀	O O O	greeting
+你 好 ！	O O O	greeting
+嗨	O	greeting
+你 好 ， 在 吗 ？	O O O O O O	greeting
+你 叫 什 么 ？	O O O O O	person_name
+你 是 谁 啊 ？	O O O O O	person_name
+你 是 谁 ？	O O O O	person_name
+你 叫 什 么 名 字 ？	O O O O O O O	person_name
+你 的 名 字 是 啥 ？	O O O O O O O	person_name
+你 叫 啥 ？	O O O O	person_name
+你 的 名 字 ？	O O O O O	person_name
+你 的 名 字 是 ？	O O O O O O	person_name
+你 叫 啥 名 字 ？	O O O O O O	person_name
+你 叫 啥 啊 ？	O O O O O	person_name
+你 多 大 啦 ？	O O O O O	person_age
+你 几 岁 了 ？	O O O O O	person_age
+你 现 在 几 岁 ？	O O O O O O	person_age
+你 年 龄 多 大 ？	O O O O O O	person_age
+你 几 岁 ？	O O O O	person_age
+你 几 岁 啦 ？	O O O O O	person_age
+你 今 年 多 大 ？	O O O O O O	person_age
+你 的 年 龄 是 多 少 岁 ？	O O O O O O O O O	person_age
+你 多 少 岁 ？	O O O O O	person_age
+你 是 男 的 还 是 女 的 ？	O O O O O O O O O	person_sex
+你 的 性 别 是 啥 ？	O O O O O O O	person_sex
+你 是 男 的 吗 ？	O O O O O O	person_sex
+你 是 女 的 吗 ？	O O O O O O	person_sex
+你 的 性 别 是 ？	O O O O O O	person_sex
+你 是 男 还 是 女 ？	O O O O O O O	person_sex
+你 爸 爸 是 谁 ？	O O O O O O	person_parents
+你 妈 妈 是 谁 ？	O O O O O O	person_parents
+你 父 母 是 谁 ？	O O O O O O	person_parents
+你 爸 是 谁 ？	O O O O O	person_parents
+你 妈 是 谁 ？	O O O O O	person_parents
+你 爸 爸 叫 啥 ？	O O O O O O	person_parents
+你 妈 妈 叫 啥 ？	O O O O O O	person_parents
+你 有 爸 爸 吗 ？	O O O O O O	person_parents
+你 有 妈 妈 嘛 ？	O O O O O O	person_parents
+你 能 做 些 什 么 ？	O O O O O O O	person_feature
+你 可 以 干 啥 ？	O O O O O O	person_feature
+你 有 什 么 功 能 ？	O O O O O O O	person_feature
+你 能 干 点 啥 ？	O O O O O O	person_feature
+你 能 干 什 么 ？	O O O O O O	person_feature
+你 能 帮 我 做 些 什 么 ？	O O O O O O O O O	person_feature
+你 可 以 做 些 什 么 ？	O O O O O O O O	person_feature
+你 能 提 供 什 么 帮 助 ？	O O O O O O O O O	person_feature
