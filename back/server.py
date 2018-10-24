@@ -22,9 +22,11 @@ def recevie_msg(msg):
         "bye": "886"
     }
     answer = answer_dict[intent]
+
     with open("./dialog.txt", "a") as f_dialog:
         f_dialog.write(msg+"\t"+answer+"\n")
-    emit("response", {"msg": })
+
+    emit("response", {"msg": answer})
 
 
 if __name__ == "__main__":
