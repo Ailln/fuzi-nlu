@@ -19,8 +19,12 @@ def predict(text):
     input_vocab, target_vocab, intent_vocab = vacab_list
 
     # load model
-    decoder = torch.load(os.path.join(save_dir, 'decoder-100.pt'))
-    encoder = torch.load(os.path.join(save_dir, 'encoder-100.pt'))
+    if USE_CUDA:
+        decoder = torch.load(os.path.join(save_dir, 'decoder-100.pt'))
+        encoder = torch.load(os.path.join(save_dir, 'encoder-100.pt'))
+    else:
+        decoder = torch.load(os.path.join(save_dir, 'decoder-100.pt'), map_location=torch.device('cpu'))
+        encoder = torch.load(os.path.join(save_dir, 'encoder-100.pt'), map_location=torch.device('cpu'))
 
     input_batch = torch.LongTensor(test_input_list)
     if USE_CUDA:
