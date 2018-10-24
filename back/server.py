@@ -5,7 +5,7 @@ from test import predict
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "secret!"
-socketio = SocketIO(app, engineio_logger=True)
+socketio = SocketIO(app)
 
 
 @socketio.on("receive")
