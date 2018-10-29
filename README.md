@@ -2,6 +2,22 @@
 
 基于 PyTorch 的聊天机器人。
 
+## 框架简介
+
+### 1. 前端
+
+-   vuejs
+-   iview
+-   socketio
+
+### 2. 后端
+
+-   flask
+-   socketio
+-   pytorch
+
+后端代码基于 [RNN-for-Joint-NLU](https://github.com/applenob/RNN-for-Joint-NLU)进行了改进。
+
 ## 文档目录
 
 ```shell
