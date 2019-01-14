@@ -84,7 +84,7 @@ export default {
       }
     },
     buttonClick () {
-      window.open('https://github.com/kinggreenhall/chatbot', 'target', '')
+      window.open('https://github.com/HaveTwoBrush/chatbot', 'target', '')
     }
   }
 }

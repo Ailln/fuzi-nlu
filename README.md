@@ -6,7 +6,7 @@
 
 ![](./src/images/readme/demo-screen-shot.jpg)
 
-[点我直达](https://chatbot.dovolopor.com)
+[点我立即尝试 DEMO](https://chatbot.dovolopor.com)
 
 ## 2 架构
 
@@ -83,3 +83,7 @@ yarn serve
 
 -   [Tensorflow动态seq2seq使用总结（r1.3）](https://github.com/applenob/RNN-for-Joint-NLU/blob/master/tensorflow_dynamic_seq2seq.md)
 -   [Attention-Based Recurrent Neural Network Models for Joint Intent Detection and Slot Filling](https://arxiv.org/abs/1609.01454)
+
+## 6 License
+
+[MIT LICENSE](./LICENSE)
