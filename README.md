@@ -87,3 +87,7 @@ yarn serve
 ## 6 License
 
 [MIT LICENSE](./LICENSE)
+
+## 7 交流群
+
+![](./src/images/readme/wechat-group.jpeg)
