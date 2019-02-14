@@ -56,7 +56,7 @@
 ## 4 安装
 
 ```shell
-git clone https://github.com/kinggreenhall/chatbot.git
+git clone https://github.com/HaveTwoBrush/chatbot.git
 
 # 启动后端
 cd chatbot/back
