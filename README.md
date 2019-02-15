@@ -88,6 +88,6 @@ yarn serve
 
 [MIT LICENSE](./LICENSE)
 
-## 7 交流群
+## 7 交流
 
-![](./src/images/readme/wechat-group.jpeg)
+请添加微信号：`kinggreenhall`，备注「chatbot」，我邀请你进入交流群。
