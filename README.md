@@ -77,7 +77,7 @@ yarn serve
 
 -   [如何安装 python 开发环境？](https://www.v2ai.cn/linux/2018/04/29/LX-2.html)
 -   [如何安装 Node 开发环境？](https://www.v2ai.cn/linux/2018/11/11/LX-10.html)
--   [PyTorch 从安装到计算 1+1](https://www.v2ai.cn/ml/2018/08/20/ML-9.html)
+-   [PyTorch 从安装到计算 1+1](https://www.v2ai.cn/dl/2018/08/20/DL-5.html)
 
 ### 模型
 
