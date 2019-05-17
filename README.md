@@ -98,6 +98,11 @@ yarn serve
 -   [Tensorflow动态seq2seq使用总结（r1.3）](https://github.com/applenob/RNN-for-Joint-NLU/blob/master/tensorflow_dynamic_seq2seq.md)
 -   [Attention-Based Recurrent Neural Network Models for Joint Intent Detection and Slot Filling](https://arxiv.org/abs/1609.01454)
 
+### 论文
+
+-  [BERT for Joint Intent Classification and Slot Filling](https://arxiv.org/pdf/1902.10909.pdf)
+
+
 ## 7 执照
 
 [MIT LICENSE](./LICENSE)
