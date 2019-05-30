@@ -15,7 +15,8 @@
     "vue-cli": "^2.9.6",
     "vue-router": "^3.0.1",
     "vue-socket.io": "^2.1.1-b",
-    "webpack": "^4.22.0"
+    "webpack": "^4.22.0",
+    "webpack-bundle-analyzer": "^3.3.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.5",
