@@ -1,6 +1,11 @@
-# chatbot
+# 🤖️ chatbot
 
-🤖️ 基于 PyTorch 的任务型聊天机器人。
+[![language](https://img.shields.io/badge/language-Py3.6+-yellow.svg)](https://docs.python.org/3.6/)
+[![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/HaveTwoBrush/chatbot/blob/master/LICENSE)
+[![stars](https://img.shields.io/github/stars/HaveTwoBrush/chatbot.svg)](https://github.com/HaveTwoBrush/chatbot/stargazers)
+[![stars](https://img.shields.io/github/forks/HaveTwoBrush/chatbot.svg)](https://github.com/HaveTwoBrush/chatbot/network/members)
+
+基于 PyTorch 的任务型聊天机器人。
 
 ## 1 简介
 
@@ -11,13 +16,13 @@
 
 本项目属于第二种，即面向任务的聊天机器人。这类型机器人的常见应用是智能客服，**目的是为了解决用户的明确需求**。
 
-![](src/images/readme/chatbot-flow.png)
+![flow](src/chatbot-flow.png)
 
 上图为面向任务的聊天机器人的一般流程，该项目目前实现了第一部分的 `NLU` 功能，包含 `Slot Filling` 和 `Intent Prediction`。
 
 ## 2 DEMO
 
-![](./src/images/readme/demo-screen-shot.jpg)
+![demo](./src/demo-screen-shot.jpg)
 
 > ⚠️ DEMO 中仅包含我编写的几十条训练样本，主要内容是关于我家🐱`锅贴`，这些只发挥了该项目的一部分功能。
 
@@ -27,15 +32,15 @@
 
 ### 2.1 前端
 
--   VueJS
--   iView
--   SocketIO
+- VueJS
+- iView
+- SocketIO
 
 ### 2. 后端
 
--   Flask
--   SocketIO
--   PyTorch
+- Flask
+- SocketIO
+- PyTorch
 
 > ⚠️ 后端代码基于 [RNN-for-Joint-NLU](https://github.com/applenob/RNN-for-Joint-NLU) 进行了改进。
 
@@ -51,7 +56,6 @@ python server.py
 # 启动前端
 cd ../front
 yarn
-yarn add vue-cli
 yarn serve
 
 # 接下来，请根据提示访问网页
@@ -79,8 +83,6 @@ yarn serve
 │   ├── train.py
 │   └── util
 ├── src # 资源
-│   └── images
-│       └── readme
 ├── LICENSE
 └── README.md
 ```
@@ -89,23 +91,23 @@ yarn serve
 
 ### 安装
 
--   [如何安装 Node 开发环境？](https://www.v2ai.cn/linux/2018/11/11/LX-10.html)
--   [如何安装 python 开发环境？](https://www.v2ai.cn/linux/2018/04/29/LX-2.html)
--   [PyTorch 从安装到计算 1+1](https://www.v2ai.cn/dl/2018/08/20/DL-5.html)
+- [如何安装 Node 开发环境？](https://www.v2ai.cn/linux/2018/11/11/LX-10.html)
+- [如何安装 python 开发环境？](https://www.v2ai.cn/linux/2018/04/29/LX-2.html)
+- [PyTorch 从安装到计算 1+1](https://www.v2ai.cn/dl/2018/08/20/DL-5.html)
 
 ### 模型
 
--   [Tensorflow动态seq2seq使用总结（r1.3）](https://github.com/applenob/RNN-for-Joint-NLU/blob/master/tensorflow_dynamic_seq2seq.md)
--   [Attention-Based Recurrent Neural Network Models for Joint Intent Detection and Slot Filling](https://arxiv.org/abs/1609.01454)
+- [Tensorflow动态seq2seq使用总结（r1.3）](https://github.com/applenob/RNN-for-Joint-NLU/blob/master/tensorflow_dynamic_seq2seq.md)
+- [Attention-Based Recurrent Neural Network Models for Joint Intent Detection and Slot Filling](https://arxiv.org/abs/1609.01454)
 
 ### 论文
 
--  [BERT for Joint Intent Classification and Slot Filling](https://arxiv.org/pdf/1902.10909.pdf)
-
+- [Attention-Based Recurrent Neural Network Models for Joint Intent Detection and Slot Filling](https://arxiv.org/abs/1609.01454)
+- [BERT for Joint Intent Classification and Slot Filling](https://arxiv.org/pdf/1902.10909.pdf)
 
 ## 7 执照
 
-[MIT LICENSE](./LICENSE)
+[MIT](./LICENSE)
 
 ## 8 交流
 
