@@ -12,6 +12,7 @@ from util.config_util import read_config
 from util.data_util import DataUtil
 
 USE_CUDA = torch.cuda.is_available()
+print(f"CUDA: {USE_CUDA}")
 
 
 def train(config):
@@ -52,6 +53,7 @@ def train(config):
             if USE_CUDA:
                 input_batch = input_batch.cuda()
                 target_batch = target_batch.cuda()
+                intent_batch = intent_batch.cuda()
 
             input_mask = torch.cat([Variable(torch.ByteTensor(tuple(map(lambda s: s == 0, t.data)))).cuda()
                                 if USE_CUDA else Variable(torch.ByteTensor(tuple(map(lambda s: s == 0, t.data))))
@@ -68,7 +70,7 @@ def train(config):
             tag_score, intent_score = decoder(start_decode, hidden_c, output, input_mask)
 
             loss_1 = loss_function_1(tag_score, target_batch.view(-1))
-            loss_2 = loss_function_2(intent_score, intent_batch.cuda())
+            loss_2 = loss_function_2(intent_score, intent_batch)
 
             loss = loss_1 + loss_2
             losses.append(loss.data.cpu().numpy() if USE_CUDA else loss.data.numpy())

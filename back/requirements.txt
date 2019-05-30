@@ -1,5 +1,6 @@
-flask >= 1.0.1
-flask_socketio >= 3.0.1
-eventlet >= 0.24.0
-torch == 0.4.1
-numpy >= 1.14.5
+flask>=1.0.1
+flask_socketio>=3.0.1
+eventlet>=0.24.0
+torch==0.4.1
+numpy>=1.14.5
+PyYAML>=5.1
