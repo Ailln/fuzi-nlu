@@ -105,9 +105,9 @@ yarn serve
 - [Attention-Based Recurrent Neural Network Models for Joint Intent Detection and Slot Filling](https://arxiv.org/abs/1609.01454)
 - [BERT for Joint Intent Classification and Slot Filling](https://arxiv.org/pdf/1902.10909.pdf)
 
-## 7 执照
+## 7 许可证
 
-[MIT](./LICENSE)
+[MIT LICENSE](./LICENSE)
 
 ## 8 交流
 
