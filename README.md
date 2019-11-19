@@ -42,7 +42,7 @@
 ## 4 安装
 
 ```shell
-git clone https://github.com/HaveTwoBrush/chatbot.git
+git clone https://github.com/Ailln/chatbot.git
 
 # 启动后端
 cd chatbot/back
