@@ -5,7 +5,7 @@ from test import predict
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "secret!"
-socketio = SocketIO(app)
+socketio = SocketIO(app, cors_allowed_origins="*")
 
 
 @socketio.on("receive")
@@ -17,7 +17,7 @@ def recevie_msg(msg):
         "name": "我叫锅贴。",
         "age": "喵龄一岁不到～",
         "sex": "我是公的！",
-        "parents": "HaveTwoBrush 啊！",
+        "parents": "Ailln 啊！",
         "feature": "学猫叫，喵～喵～喵～",
         "bye": "886"
     }

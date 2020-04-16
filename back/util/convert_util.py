@@ -142,9 +142,9 @@ class ConvertUtil(object):
 
         train_data_list = [train_input_list, train_target_list, train_intent_list]
         validate_data_list = [validate_input_list, validate_target_list, validate_intent_list]
-        vacab_list = [input_vocab, target_vocab, intent_vocab]
+        vocab_list = [input_vocab, target_vocab, intent_vocab]
 
-        return train_data_list, validate_data_list, vacab_list
+        return train_data_list, validate_data_list, vocab_list
 
     def gen_test_data(self, test_data):
         # print("\n>> start read input vocab...")
@@ -157,6 +157,6 @@ class ConvertUtil(object):
         # print("\n>> word to id: test...")
         test_input_list = self.word2id(input_vocab, [test_data], self.seq_length)
 
-        vacab_list = [input_vocab, target_vocab, intent_vocab]
+        vocab_list = [input_vocab, target_vocab, intent_vocab]
 
-        return test_input_list, vacab_list
+        return test_input_list, vocab_list

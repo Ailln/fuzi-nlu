@@ -62,4 +62,3 @@ def predict(text):
 
 if __name__ == '__main__':
     predict("你叫什么名字？")
-
