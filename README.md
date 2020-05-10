@@ -98,9 +98,6 @@ yarn serve
 
 ## 6 参考
 
-- [如何安装 Node 开发环境？](https://www.v2ai.cn/linux/2018/11/11/LX-10.html)
-- [如何安装 python 开发环境？](https://www.v2ai.cn/linux/2018/04/29/LX-2.html)
-- [PyTorch 从安装到计算 1+1](https://www.v2ai.cn/dl/2018/08/20/DL-5.html)
 - [Tensorflow动态seq2seq使用总结（r1.3）](https://github.com/applenob/RNN-for-Joint-NLU/blob/master/tensorflow_dynamic_seq2seq.md)
 - [Attention-Based Recurrent Neural Network Models for Joint Intent Detection and Slot Filling](https://arxiv.org/abs/1609.01454)
 - [BERT for Joint Intent Classification and Slot Filling](https://arxiv.org/pdf/1902.10909.pdf)
