@@ -69,8 +69,8 @@ import VueSocketio from 'vue-socket.io'
 import socketio from 'socket.io-client'
 import Vue from 'vue'
 
-Vue.use(VueSocketio, socketio('https://socketio.dovolopor.com'));
-// Vue.use(VueSocketio, socketio('http://127.0.0.1:8002/'))
+// Vue.use(VueSocketio, socketio('https://socketio.dovolopor.com'));
+Vue.use(VueSocketio, socketio('http://127.0.0.1:8002/'))
 
 export default {
   sockets: {
