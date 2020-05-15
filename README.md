@@ -1,11 +1,11 @@
-# Chatbot
+# Chatbot 🤖️
 
 [![language](https://img.shields.io/badge/language-Py3.6+-yellow.svg)](https://docs.python.org/3.6/)
 [![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/HaveTwoBrush/chatbot/blob/master/LICENSE)
 [![stars](https://img.shields.io/github/stars/HaveTwoBrush/chatbot.svg)](https://github.com/HaveTwoBrush/chatbot/stargazers)
 [![stars](https://img.shields.io/github/forks/HaveTwoBrush/chatbot.svg)](https://github.com/HaveTwoBrush/chatbot/network/members)
 
-🤖️基于 PyTorch 的任务型聊天机器人。
+基于 PyTorch 的任务型聊天机器人。
 
 ## 1 简介
 
@@ -98,9 +98,6 @@ yarn serve
 
 ## 6 参考
 
-- [如何安装 Node 开发环境？](https://www.v2ai.cn/linux/2018/11/11/LX-10.html)
-- [如何安装 python 开发环境？](https://www.v2ai.cn/linux/2018/04/29/LX-2.html)
-- [PyTorch 从安装到计算 1+1](https://www.v2ai.cn/dl/2018/08/20/DL-5.html)
 - [Tensorflow动态seq2seq使用总结（r1.3）](https://github.com/applenob/RNN-for-Joint-NLU/blob/master/tensorflow_dynamic_seq2seq.md)
 - [Attention-Based Recurrent Neural Network Models for Joint Intent Detection and Slot Filling](https://arxiv.org/abs/1609.01454)
 - [BERT for Joint Intent Classification and Slot Filling](https://arxiv.org/pdf/1902.10909.pdf)
@@ -108,7 +105,7 @@ yarn serve
 
 ## 7 许可证
 
-[MIT LICENSE](./LICENSE)
+[![](https://award.dovolopor.com?lt=License&rt=MIT&rbc=green)](./LICENSE)
 
 ## 8 交流
 
