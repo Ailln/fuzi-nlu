@@ -109,4 +109,4 @@ yarn serve
 
 ## 8 交流
 
-请添加微信号：`kinggreenhall`，备注「chatbot」，我邀请你进入交流群。
+请添加微信号：`Ailln_`，备注「chatbot」，我邀请你进入交流群。
