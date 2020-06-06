@@ -10,7 +10,6 @@ socketio = SocketIO(app, cors_allowed_origins="*")
 
 @socketio.on("receive")
 def recevie_msg(msg):
-    print(msg)
     intent = predict(msg)
     answer_dict = {
         "greet": "你好～",

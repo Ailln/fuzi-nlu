@@ -44,15 +44,15 @@
 
 > ⚠️ 后端代码基于 [RNN-for-Joint-NLU](https://github.com/applenob/RNN-for-Joint-NLU) 进行了改进。
 
-## 4 安装
+## 4 运行
+
+### 4.1 直接运行
 
 ```shell
 # 1 下载文件
-
 git clone https://github.com/Ailln/chatbot.git
 
 # 2 启动后端
-
 cd chatbot/back
 # 安装依赖
 pip install -r requirements.txt
@@ -60,7 +60,6 @@ pip install -r requirements.txt
 python server.py
 
 # 3 启动前端
-
 cd ../front
 # 安装依赖
 yarn
@@ -68,6 +67,22 @@ yarn
 yarn serve
 
 # 4 接下来，根据提示访问网页即可
+```
+
+### 4.2 以 docker 方式运行
+
+```shell
+# 1 下载文件
+git clone https://github.com/Ailln/chatbot.git
+
+# 2 构建镜像（这一步可能会因为网络问题出错，可以多尝试几次）
+cd chatbot && docker image build -t chatbot .
+
+# 3 运行
+docker run -p 8080:8080 -p 8002:8002 -it chatbot /bin/bash
+
+cd /chatbot/back && python server.py &
+cd /chatbot/front && npm run serve
 ```
 
 ## 5 目录

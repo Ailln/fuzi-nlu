@@ -96,9 +96,9 @@ class ConvertUtil(object):
                 input_id_list.append(word_id)
             all_input_id_list[i_input] = np.array(input_id_list)
 
-            read_percent = i_input / (len(input_word_list) / 100)
-            if not i_input % 10:
-                print(f">> convert: {read_percent:3.1f}%", end="\r")
+            # read_percent = i_input / (len(input_word_list) / 100)
+            # if not i_input % 10:
+            #     print(f">> convert: {read_percent:3.1f}%", end="\r")
 
         return all_input_id_list
 

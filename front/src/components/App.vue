@@ -144,14 +144,12 @@ export default {
 #question {
   float: right;
   margin: 10px 10px 10px 100px;
-  white-space: normal;
   text-align: left;
 }
 
 #answer {
   float: left;
   margin: 10px 100px 10px 10px;
-  white-space: normal;
   text-align: left;
 }
 </style>
