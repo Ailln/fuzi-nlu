@@ -4,3 +4,4 @@ eventlet>=0.24.0
 torch==0.4.1
 numpy>=1.14.5
 PyYAML>=5.1
+cn2an==0.5.2
