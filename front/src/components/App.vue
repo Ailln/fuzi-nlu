@@ -9,7 +9,6 @@
         >More in Github</Button
       >
     </div>
-
     <div id="chatbot">
       <Card :bordered="false" id="content">
         <p slot="title">🤖️ ChatBot</p>
@@ -59,7 +58,11 @@
           @on-search="sendQuestionMessage"
         />
       </div>
-      <p>该 DEMO 中仅包含我随意编写的几十条训练样本，主要内容是关于我家猫「锅贴」的介绍信息，这些只发挥了该项目的一部分功能。</p>
+      <div style="text-align: center; width: 800px; margin: 20px auto">
+        <Alert type="info" show-icon>
+          注：该 DEMO 仅包含我随意编写的几十条训练样本，主要是关于我家猫「锅贴」的介绍，这些只发挥了该项目的一小部分功能。
+        </Alert>
+      </div>
     </div>
   </div>
 </template>
@@ -88,11 +91,19 @@ export default {
     return {
       questionMessage: '',
       messageList: [
-        { user: 1, msg: '你好！' },
         {
           user: 0,
           msg:
-            '你好啊～我是由 Ailln 开发的智能机器人——「锅贴」。现在试试对我说：你叫什么名字吧？',
+            '新功能：支持「中文数字」和「阿拉伯数字」转化，需要在转化句子前加入「cn2an:」或者「an2cn:」。',
+        },
+        { user: 1, msg: '你好！' },
+        {
+          user: 0,
+          msg: '你好啊～我是由 Ailln 开发的智能机器人——「锅贴」。',
+        },
+        {
+          user: 0,
+          msg: '现在试试对我说：你叫什么名字吧？',
         },
       ],
     }
