@@ -1,10 +1,18 @@
-import Vue from 'vue';
-import App from './components/App.vue';
+import Vue from 'vue'
+import VueSocketio from 'vue-socket.io'
+import socketio from 'socket.io-client'
+import iView from 'iview'
+import 'iview/dist/styles/iview.css'
+import App from './components/App.vue'
 
-import iView from 'iview';
-import 'iview/dist/styles/iview.css';
 
-Vue.use(iView);
+Vue.use(iView)
+
+let apiUrl = "http://127.0.0.1:8002/";
+if (process.env.NODE_ENV === "production") {
+    apiUrl = "https://socketio.dovolopor.com"
+}
+Vue.use(VueSocketio, socketio(apiUrl))
 
 new Vue({
     el: '#app',
