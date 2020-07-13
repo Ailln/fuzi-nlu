@@ -1,11 +1,12 @@
 # Chatbot 🤖️
 
-[![language](https://img.shields.io/badge/language-Py3.6+-yellow.svg)](https://docs.python.org/3.6/)
 [![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/HaveTwoBrush/chatbot/blob/master/LICENSE)
 [![stars](https://img.shields.io/github/stars/HaveTwoBrush/chatbot.svg)](https://github.com/HaveTwoBrush/chatbot/stargazers)
 [![stars](https://img.shields.io/github/forks/HaveTwoBrush/chatbot.svg)](https://github.com/HaveTwoBrush/chatbot/network/members)
 
 基于 PyTorch 的任务型聊天机器人。
+
+> 🎈 用我的 AI 大师码 `1123` 在滴滴云上购买「GPU/vGPU/机器学习产品」可享受 9 折优惠，点击前往[滴滴云](https://www.didiyun.com/)官网。
 
 ## 1 简介
 
