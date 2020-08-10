@@ -1,9 +1,8 @@
 # Chatbot 🤖️
 
-[![language](https://img.shields.io/badge/language-Py3.6+-yellow.svg)](https://docs.python.org/3.6/)
-[![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/HaveTwoBrush/chatbot/blob/master/LICENSE)
-[![stars](https://img.shields.io/github/stars/HaveTwoBrush/chatbot.svg)](https://github.com/HaveTwoBrush/chatbot/stargazers)
-[![stars](https://img.shields.io/github/forks/HaveTwoBrush/chatbot.svg)](https://github.com/HaveTwoBrush/chatbot/network/members)
+[![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/Ailln/chatbot/blob/master/LICENSE)
+[![stars](https://img.shields.io/github/stars/Ailln/chatbot.svg)](https://github.com/Ailln/chatbot/stargazers)
+[![stars](https://img.shields.io/github/forks/Ailln/chatbot.svg)](https://github.com/Ailln/chatbot/network/members)
 
 基于 PyTorch 的任务型聊天机器人。
 
@@ -121,6 +120,7 @@ cd /chatbot/front && npm run serve
 ## 7 许可证
 
 [![](https://award.dovolopor.com?lt=License&rt=MIT&rbc=green)](./LICENSE)
+[![](https://award.dovolopor.com?lt=Ailln's&rt=idea&lbc=lightgray&rbc=red&ltc=red)](https://github.com/Ailln/award)
 
 ## 8 交流
 
