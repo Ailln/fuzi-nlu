@@ -27,25 +27,9 @@
 
 [点我立即尝试 DEMO](https://chatbot.dovolopor.com)
 
-## 3 架构
+## 3 运行
 
-### 2.1 前端
-
-- VueJS
-- iView
-- SocketIO
-
-### 2. 后端
-
-- Flask
-- SocketIO
-- PyTorch
-
-> ⚠️ 后端代码基于 [RNN-for-Joint-NLU](https://github.com/applenob/RNN-for-Joint-NLU) 进行了改进。
-
-## 4 运行
-
-### 4.1 直接运行
+### 3.1 直接运行
 
 ```shell
 # 1 下载文件
@@ -68,7 +52,7 @@ yarn serve
 # 4 接下来，根据提示访问网页即可
 ```
 
-### 4.2 以 docker 方式运行
+### 3.2 以 docker 方式运行
 
 ```shell
 # 1 下载文件
@@ -84,17 +68,33 @@ cd /chatbot/back && python server.py &
 cd /chatbot/front && npm run serve
 ```
 
+## 4 架构
+
+### 4.1 前端
+
+- VueJS
+- iView
+- SocketIO
+
+### 4.2 后端
+
+- Flask
+- SocketIO
+- PyTorch
+
+> ⚠️ 后端代码基于 [RNN-for-Joint-NLU](https://github.com/applenob/RNN-for-Joint-NLU) 进行了改进。
+
 ## 5 目录
 
 ```shell
 .
-├── front #前端
+├── front # 前端
 │   ├── public
 │   ├── src
 │   ├── babel.config.js
 │   ├── package.json
 │   └── yarn.lock
-├── back #后端
+├── back # 后端
 │   ├── config
 │   ├── data
 │   ├── model
