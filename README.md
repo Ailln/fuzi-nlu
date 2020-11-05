@@ -1,10 +1,10 @@
-# Chatbot 🤖️
+# Chatbot
 
 [![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/Ailln/chatbot/blob/master/LICENSE)
 [![stars](https://img.shields.io/github/stars/Ailln/chatbot.svg)](https://github.com/Ailln/chatbot/stargazers)
 [![stars](https://img.shields.io/github/forks/Ailln/chatbot.svg)](https://github.com/Ailln/chatbot/network/members)
 
-基于 PyTorch 的任务型聊天机器人。
+🤖️ 基于 PyTorch 的任务型聊天机器人。
 
 ## 1 简介
 
@@ -116,6 +116,7 @@ cd /chatbot/front && npm run serve
 - [Attention-Based Recurrent Neural Network Models for Joint Intent Detection and Slot Filling](https://arxiv.org/abs/1609.01454)
 - [BERT for Joint Intent Classification and Slot Filling](https://arxiv.org/pdf/1902.10909.pdf)
 - [从“连接”到“交互”—阿里巴巴智能对话交互实践及思考](https://yq.aliyun.com/articles/144035)
+- [A Frustratingly Easy Approach for Joint Entity and Relation Extraction](https://arxiv.org/pdf/2010.12812.pdf)
 
 ## 7 许可证
 
