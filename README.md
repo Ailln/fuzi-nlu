@@ -29,6 +29,8 @@
 
 ## 3 运行
 
+> 新增加基于 [rasa-nlu-trainer](https://github.com/RasaHQ/rasa-nlu-trainer) 的 [Labeling 工具](https://chatbot.dovolopor.com/labeling)，可以方便的构建数据集。
+
 ### 3.1 直接运行
 
 ```shell
