@@ -59,8 +59,9 @@
         />
       </div>
       <div style="text-align: center; width: 800px; margin: 20px auto">
-        <Alert type="info" show-icon>
-          注：该 DEMO 仅包含我随意编写的几十条训练样本，主要是关于我家猫「锅贴」的介绍，这些只发挥了该项目的一小部分功能。
+        <Alert type="info" show-icon style="line-height: 2">
+          注：该 DEMO 仅包含我随意编写的几十条训练样本，主要是关于我家猫「锅贴」的介绍，这些只发挥了该项目的一小部分功能。<br>
+          当然你也自定义数据来丰富聊天机器人的功能，这里提供了构建数据集的 <Button style="padding: 0; margin: 0; color: #2d8cf0;"  to="./labeling" target="_blank" type="text" size="small">可视化工具 Labeling</Button>。
         </Alert>
       </div>
     </div>
@@ -113,8 +114,10 @@ export default {
         this.questionMessage = ''
       }
     },
-    buttonClick() {
-      window.open('https://github.com/Ailln/chatbot', 'target', '')
+    buttonClick(name="github") {
+      if (name == "github") {
+        window.open('https://github.com/Ailln/chatbot', 'target', '')
+      }
     },
   },
 }
