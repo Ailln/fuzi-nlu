@@ -114,10 +114,8 @@ export default {
         this.questionMessage = ''
       }
     },
-    buttonClick(name="github") {
-      if (name == "github") {
-        window.open('https://github.com/Ailln/chatbot', 'target', '')
-      }
+    buttonClick() {
+      window.open('https://github.com/Ailln/chatbot', 'target', '')
     },
   },
 }

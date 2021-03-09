@@ -29,8 +29,6 @@
 
 ## 3 运行
 
-> 新增加基于 [rasa-nlu-trainer](https://github.com/RasaHQ/rasa-nlu-trainer) 的 [Labeling 工具](https://chatbot.dovolopor.com/labeling)，可以方便的构建数据集。
-
 ### 3.1 直接运行
 
 ```shell
@@ -69,6 +67,11 @@ docker run -p 8080:8080 -p 8002:8002 -it chatbot /bin/bash
 cd /chatbot/back && python server.py &
 cd /chatbot/front && npm run serve
 ```
+
+## 3.3 自定义数据集
+
+1. 使用基于 [rasa-nlu-trainer](https://github.com/RasaHQ/rasa-nlu-trainer) 的 [Labeling 工具](https://chatbot.dovolopor.com/labeling)，可以方便的构建数据集。
+2. 直接将生成的 json 数据替换掉 `back/data/train.json` 即可（或者修改配置文件 `back/config/guotie.yaml` 中的 `input_json_path` 的路径）。
 
 ## 4 架构
 

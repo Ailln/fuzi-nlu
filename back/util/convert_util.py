@@ -16,12 +16,12 @@ class ConvertUtil(object):
         self.seq_length = config["seq_length"]
 
     def json2iob(self):
-        with open(self.input_json_path, "r", encoding='utf_8_sig') as f_read:
+        with open(self.input_json_path, "r", encoding="utf-8") as f_read:
             json_data = json.load(f_read)
 
         bio_save_list = []
         label_list = []
-        for json_item in json_data["rasa_nlu_data"]["common_examples"]:
+        for json_item in json_data["nlu_data"]:
             # TODO 特殊字符替换
             text = json_item["text"].replace(" ", ",")
             text_split = " ".join([word for word in text])
