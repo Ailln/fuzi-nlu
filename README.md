@@ -23,9 +23,36 @@
 
 ![demo](./src/demo-screen-shot.jpg)
 
-> ⚠️ DEMO 中仅包含我编写的几十条训练样本（在 `back/data/train.json`），主要内容是关于我家🐱`锅贴`，这些只发挥了该项目的一部分功能。
-
 [点我立即尝试 DEMO](https://chatbot.dovolopor.com)
+
+### 2.1 数据集
+
+1. `guotie`：这份数据集的主要内容是关于我家🐱`锅贴`，只使用了意图识别的功能。
+2. `weather`: 在 Github 上找到的一份关于天气的 [中文公开数据集](https://github.com/howl-anderson/NLU_benchmark_dataset/tree/master/dataset/dialogflow/weather/rasa_format) 。
+3. `fewjoint`: [SMP2020](https://atmahou.github.io/attachments/FewJoint.zip)
+
+### 2.2 数据标注
+
+这里使用 RASA 开源的标注工具 [RASA-NLU-Trainer](https://github.com/RasaHQ/rasa-nlu-trainer) 进行标注。
+
+标注完成后需要进行格式转化才能使用，这里以 `/back/data/guotie.json` 为例：
+
+```bash
+pip install rasa==2.6.3
+
+cd ./back/data
+mkdir guotie
+
+# rasa 暂时不支持从 json 直接转成 yaml，因此需要先转 md，再转 yaml
+rasa data convert nlu -f md --data guotie.json --out ./guotie/nlu.md
+rasa data convert nlu -f yaml --data ./guotie/nlu.md --out ./guotie/
+
+rm ./guotie/nlu.md
+mv ./guotie/nlu_converted.yml ./guotie/nlu.yml
+
+# 生成 domain
+python -m run.generate_domain_from_nlu --nlu ./data/guotie/nlu.yml --domain ./data/guotie/domain.yml
+```
 
 ## 3 运行
 
@@ -40,16 +67,15 @@ cd chatbot/back
 # 安装依赖
 pip install -r requirements.txt
 # 运行
-python server.py
+python -m run.server
 
 # 3 启动前端
 cd ../front
 # 安装依赖
-yarn
+npm install
 # 运行
-yarn serve
-
-# 4 接下来，根据提示访问网页即可
+npm run serve
+# 在浏览器中打开 http://127.0.0.1:8080
 ```
 
 ### 3.2 以 docker 方式运行
@@ -58,20 +84,29 @@ yarn serve
 # 1 下载文件
 git clone https://github.com/Ailln/chatbot.git
 
-# 2 构建镜像（这一步可能会因为网络问题出错，可以多尝试几次）
-cd chatbot && docker image build -t chatbot .
+# 2 运行后端
+cd chatbot/back
+docker build -t chatbot-back:1.0.0 .
+docker run -d --restart=always --name chatbot-back -p 8002:8002 chatbot-back:1.0.0
+docker logs -f chatbot-back
 
-# 3 运行
-docker run -p 8080:8080 -p 8002:8002 -it chatbot /bin/bash
-
-cd /chatbot/back && python server.py &
-cd /chatbot/front && npm run serve
+# 2 运行前端
+cd ../front
+docker build -t chatbot-front:1.0.0 .
+docker run -d --restart=always --name chatbot-front -p 8080:80 chatbot-front:1.0.0
+docker logs -f chatbot-front
+# 在浏览器中打开 http://127.0.0.1:8080
 ```
 
-## 3.3 自定义数据集
+### 3.3 重新训练模型
+```bash
+cd chatbot/back
+# 训练
+python -m run.train
 
-1. 使用基于 [rasa-nlu-trainer](https://github.com/RasaHQ/rasa-nlu-trainer) 的 [Labeling 工具](https://chatbot.dovolopor.com/labeling)，可以方便的构建数据集。
-2. 直接将生成的 json 数据替换掉 `back/data/train.json` 即可（或者修改配置文件 `back/config/guotie.yaml` 中的 `input_json_path` 的路径）。
+# 测试
+python -m run.test
+```
 
 ## 4 架构
 
@@ -87,28 +122,28 @@ cd /chatbot/front && npm run serve
 - SocketIO
 - PyTorch
 
-> ⚠️ 后端代码基于 [RNN-for-Joint-NLU](https://github.com/applenob/RNN-for-Joint-NLU) 进行了改进。
-
 ## 5 目录
 
-```shell
+```
 .
 ├── front # 前端
-│   ├── public
-│   ├── src
-│   ├── babel.config.js
-│   ├── package.json
-│   └── yarn.lock
+│     ├── public
+│     ├── src
+│     ├── babel.config.js
+│     ├── Dockerfile
+│     ├── .dockerignore
+│     ├── package.json
+│     └── package-lock.json
 ├── back # 后端
-│   ├── config
-│   ├── data
-│   ├── model
-│   ├── util
-│   ├── save
-│   ├── server.py
-│   ├── test.py
-│   ├── train.py
-│   └── requirements.txt
+│     ├── config
+│     ├── data
+│     ├── model
+│     ├── util
+│     ├── save
+│     ├── qps_test.py
+│     ├── Dockerfile
+│     ├── .dockerignore
+│     └── requirements.txt
 ├── src # 资源
 ├── LICENSE
 ├── README.md
@@ -122,6 +157,7 @@ cd /chatbot/front && npm run serve
 - [BERT for Joint Intent Classification and Slot Filling](https://arxiv.org/pdf/1902.10909.pdf)
 - [从“连接”到“交互”—阿里巴巴智能对话交互实践及思考](https://yq.aliyun.com/articles/144035)
 - [A Frustratingly Easy Approach for Joint Entity and Relation Extraction](https://arxiv.org/pdf/2010.12812.pdf)
+- [FewJoint: A Few-shot Learning Benchmark for Joint Language Understanding](https://arxiv.org/abs/2009.08138)
 
 ## 7 许可证
 

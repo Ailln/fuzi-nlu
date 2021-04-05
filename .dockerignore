@@ -1,7 +1,0 @@
-.git
-
-front/node_modules
-front/dist
-
-back/*.pyc
-back/dialog.txt

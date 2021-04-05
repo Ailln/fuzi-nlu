@@ -1,0 +1,10 @@
+version: '2.0'
+intents:
+- bye
+- age
+- name
+- parents
+- greet
+- feature
+- sex
+entities: []

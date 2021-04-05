@@ -2,7 +2,7 @@ from flask import Flask
 from flask_socketio import SocketIO, emit
 from cn2an import transform
 
-from test import predict
+from run.test import predict
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "secret!"
@@ -18,8 +18,9 @@ answer_dict = {
     "bye": "886"
 }
 
+
 @socketio.on("receive")
-def recevie_msg(msg):
+def receive(msg):
     if ":" in msg:
         mode, _msg = msg.split(":")
         if mode in ["cn2an", "an2cn"]:
@@ -31,7 +32,7 @@ def recevie_msg(msg):
         intent = predict(msg)
         answer = answer_dict[intent]
 
-    with open("./dialog.txt", "a") as f_dialog:
+    with open("../dialog.txt", "a") as f_dialog:
         f_dialog.write(msg+"\t"+answer+"\n")
 
     emit("response", {"msg": answer})

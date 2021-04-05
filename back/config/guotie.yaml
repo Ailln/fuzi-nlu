@@ -1,19 +1,11 @@
 embedding_size: 64
 hidden_size: 64
-n_layers: 3
-seq_length: 20
-epoch_size: 100
-batch_size: 1
-learning_rate: 0.001
+seq_length: 10
+epoch_size: 20
+batch_size: 4
+learning_rate: 0.005
 
-input_json_path: "./data/train.json"
-input_iob_path: "./data/train.iob"
-train_data_path: "./data/train.iob"
-validate_data_path: "./data/train.iob"
-input_vocab_path: "./data/input.vocab"
-target_vocab_path: "./data/target.vocab"
-intent_vocab_path: "./data/intent.vocab"
-save_dir: "./save/"
-
-run_type: train
-dataset_size: 45
+input_vocab_path: "./data/input_vocab.txt"
+nlu_path: "./data/guotie/nlu.yml"
+domain_path: "./data/guotie/domain.yml"
+save_dir: "./save/guotie"
