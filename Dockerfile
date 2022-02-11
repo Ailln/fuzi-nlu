@@ -13,7 +13,7 @@ ENV NODE_INSTALLER nodesource_setup.sh
 RUN curl -sL https://deb.nodesource.com/setup_10.x -o $NODE_INSTALLER
 RUN /bin/bash $NODE_INSTALLER && rm $NODE_INSTALLER
 RUN apt install -y nodejs
-RUN cd front && /usr/bin/npm install --registry=https://registry.npm.taobao.org
+RUN cd front && /usr/bin/npm install --registry=https://registry.npmmirror.com
 
 EXPOSE 8002
 EXPOSE 8080
