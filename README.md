@@ -6,6 +6,8 @@
 
 🤖️ 基于 PyTorch 的任务型聊天机器人。
 
+> 🎈 v1.0.0 重磅更新: 重构整个项目代码，将 PyTorch 升级到 1.6.0 ! 
+
 ## 1 简介
 
 常见的聊天机器人有两种：
@@ -21,19 +23,21 @@
 
 ## 2 DEMO
 
-![demo](./src/demo-screen-shot.jpg)
+![demo](./src/demo-screen-shot.png)
 
-[点我立即尝试 DEMO](https://chatbot.dovolopor.com)
+[>> 点我立即尝试 DEMO <<](https://chatbot.dovolopor.com)
 
 ### 2.1 数据集
 
 1. `guotie`：这份数据集的主要内容是关于我家🐱`锅贴`，只使用了意图识别的功能。
 2. `weather`: 在 Github 上找到的一份关于天气的 [中文公开数据集](https://github.com/howl-anderson/NLU_benchmark_dataset/tree/master/dataset/dialogflow/weather/rasa_format) 。
-3. `fewjoint`: [SMP2020](https://atmahou.github.io/attachments/FewJoint.zip)
+3. `fewjoint`: [SMP2020](https://atmahou.github.io/attachments/FewJoint.zip) 。
 
 ### 2.2 数据标注
 
 这里使用 RASA 开源的标注工具 [RASA-NLU-Trainer](https://github.com/RasaHQ/rasa-nlu-trainer) 进行标注。
+
+> 我自己部署了一份在线上，可以[直接使用](https://chatbot.dovolopor.com/labeling/) 。
 
 标注完成后需要进行格式转化才能使用，这里以 `/back/data/guotie.json` 为例：
 
