@@ -35,7 +35,6 @@ class DataUtil(object):
 
         intent_vocab = [self.pad_token, self.unk_token] + domain_data["intents"]
 
-        # test
         return input_vocab, input_vocab, intent_vocab
 
     def word2id(self, input_vocab, sequence_list, max_length):
@@ -96,3 +95,14 @@ class DataUtil(object):
                     intent_list.append(self.intent2id(intent_vocab, nlu_item["intent"]))
 
         return input_list, target_list, intent_list
+
+    def get_all_examples(self):
+        nlu_data = self.get_yml_data(self.nlu_path)
+        example_list = []
+        for nlu_item in nlu_data["nlu"]:
+            if "intent" in nlu_item:
+                for example in nlu_item["examples"].strip().split("\n"):
+                    example = example[2:]
+                    example_list.append(example)
+
+        return example_list

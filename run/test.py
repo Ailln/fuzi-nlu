@@ -1,20 +1,19 @@
 import torch
 
 from util.data_util import DataUtil
-from util.conf_util import read_conf
+from util.conf_util import get_conf
 from util.log_util import get_logger
 
 logger = get_logger(__name__)
 device = "cuda" if torch.cuda.is_available() else "cpu"
 logger.info(f"device: {device}")
 
-config = read_conf()
-save_dir = config["save_dir"]
-batch_size = config["batch_size"]
-seq_length = config["seq_length"]
-data_util = DataUtil(config)
+conf = get_conf()
+save_dir = conf["save_dir"]
+batch_size = conf["batch_size"]
+seq_length = conf["seq_length"]
+data_util = DataUtil(conf)
 
-# load model
 model = torch.load(f"{save_dir}/model.pt", map_location=torch.device("cpu"))
 model.eval()
 
@@ -33,8 +32,8 @@ def predict(example):
     # calculate intent detection accuracy
     intent_score = torch.softmax(intent_score, dim=-1)
     max_intent_prob, max_intent_index = intent_score.max(-1)
-    intent_test = intent_vocab[max_intent_index[0]]
-    logger.info(f"intent: {intent_test}({max_intent_prob[0]:.4f})")
+    confidence = round(max_intent_prob[0].item(), 4)
+    intent = intent_vocab[max_intent_index[0]]
 
     # calculate tag detection accuracy
     _, max_tag_index = slot_scores.max(-1)
@@ -46,7 +45,7 @@ def predict(example):
         else:
             target_test.append(_tag)
 
-    return intent_test
+    return intent, confidence
 
 
 if __name__ == '__main__':
@@ -57,8 +56,8 @@ if __name__ == '__main__':
     while True:
         data = input(">> ")
         if data != "quit":
-            predict(data)
+            _intent, _confidence = predict(data)
+            print(f"intent: {_intent}({_confidence})")
         else:
             print("\n// bye! see you again.\n")
             break
-

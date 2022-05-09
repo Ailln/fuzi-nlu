@@ -1,12 +1,4 @@
 apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: fuzi-nlu
-  namespace: fuzi
-data:
-  suggestNumber: 1
----
-apiVersion: v1
 kind: Service
 metadata:
   name: fuzi-nlu
@@ -14,8 +6,8 @@ metadata:
 spec:
   type: NodePort
   ports:
-    - port: 8080
-      nodePort: 30101
+    - port: 8081
+      nodePort: 30102
   selector:
      app: fuzi-nlu
 ---
@@ -38,10 +30,4 @@ spec:
       - name: fuzi-nlu
         image: 192.168.2.101:5000/fuzi-nlu:1.0.0
         ports:
-        - containerPort: 8080
-        env:
-        - name: suggestNumber
-          valueFrom:
-            configMapKeyRef:
-              name: fuzi-nlu
-              key: suggestNumber
+        - containerPort: 8081

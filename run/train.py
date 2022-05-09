@@ -14,21 +14,21 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 print(f"device: {device}")
 
 
-def train(config):
-    save_dir = config["save_dir"]
-    learning_rate = config["learning_rate"]
-    batch_size = config["batch_size"]
-    epoch_size = config["epoch_size"]
+def train(conf):
+    save_dir = conf["save_dir"]
+    learning_rate = conf["learning_rate"]
+    batch_size = conf["batch_size"]
+    epoch_size = conf["epoch_size"]
 
     if not os.path.exists(save_dir):
         os.makedirs(save_dir)
 
-    train_dataset = DatasetUtil(config)
+    train_dataset = DatasetUtil(conf)
     train_dataloader = DataLoader(train_dataset, batch_size, shuffle=True, drop_last=True)
-    validate_dataset = DatasetUtil(config)
+    validate_dataset = DatasetUtil(conf)
     validate_dataloader = DataLoader(validate_dataset, batch_size, shuffle=True, drop_last=True)
 
-    model = JointNLU(config, device).to(device)
+    model = JointNLU(conf, device).to(device)
     model.train()
 
     slot_loss = nn.CrossEntropyLoss()

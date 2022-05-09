@@ -7,4 +7,4 @@ RUN pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 COPY ./ /app/
 
-CMD python -m run.aiohttp_server
+CMD python -m run.server

@@ -1,4 +1,4 @@
-# fuzi nlu
+# FUZI NLU
 
 [![Apache2 License](https://img.shields.io/badge/license-Apache2-orange.svg)](https://github.com/Ailln/fuzi-nlu/blob/master/LICENSE)
 [![stars](https://img.shields.io/github/stars/Ailln/fuzi-nlu.svg)](https://github.com/Ailln/fuzi-nlu/stargazers)
@@ -8,12 +8,14 @@
 
 ## 1 简介
 
-`夫子` 聊天机器人有 5 个模块组成：
-1. [fuzi-view](https://github.com/Ailln/fuzi-view): 聊天界面模块，与用户进行交互。
-2. [fuzi-nlu](https://github.com/Ailln/fuzi-nlu): 自然语言处理模块，理解用户的问题。
-3. fuzi-core: 对话管理模块，推断用户的意图。
-4. fuzi-admin: 后台管理模块，管理机器人的设置。
-5. fuzi-mark: 数据标注模块，标注用户的问题。
+`夫子` 聊天机器人有 7 个模块组成：
+1. [fuzi-bot](https://github.com/Ailln/fuzi-bot): 聊天界面模块，与用户进行交互。
+2. [fuzi-bot-api](https://github.com/Ailln/fuzi-bot-api): 聊天接口模块，与其他后端模块通信。
+3. [fuzi-nlu](https://github.com/Ailln/fuzi-nlu): 自然语言处理模块，理解用户的问题。
+4. fuzi: 对话管理模块，推断用户的意图。
+5. fuzi-admin: 后台管理模块，管理机器人的设置。
+6. fuzi-admin-api: 后台管理接口，与其他后端模块通信。
+7. fuzi-mark: 数据标注模块，标注用户的问题。
 
 常见地聊天机器人有两种：
 
@@ -74,7 +76,7 @@ cd fuzi-nlu
 # 安装依赖
 pip install -r requirements.txt
 
-python -m run.aiohttp_server
+python -m run.server
 ```
 
 ## 5 部署
@@ -89,14 +91,14 @@ cd fuzi-nlu
 # 打包
 docker build -t fuzi-nlu:1.0.0 .
 # 运行
-docker run -d --restart=always --name fuzi-nlu -p 8080:8080 fuzi-nlu:1.0.0
+docker run -d --restart=always --name fuzi-nlu -p 8081:8081 fuzi-nlu:1.0.0
 
 # in arm64
 cd fuzi-nlu
 # 打包
 docker build -t fuzi-nlu:1.0.0 -f deploy/arm64.Dockerfile .
 # 运行
-docker run -d --restart=always --name fuzi-nlu -p 8080:8080 fuzi-nlu:1.0.0
+docker run -d --restart=always --name fuzi-nlu -p 8081:8081 fuzi-nlu:1.0.0
 ```
 
 ### 5.2 Kubernetes
@@ -123,10 +125,10 @@ python -m run.test
 ### 6.2 QPS Test
 
 ```shell
-pip install locust
+pip install locust -U
 
-locust -f test/qps_test.py -H http://127.0.0.1:8080 -u 10 -r 2
-# 打开 http://0.0.0.0:8089
+locust -f test/qps_test.py -u 10 -r 2
+# 打开 http://127.0.0.1:8089
 ```
 
 ## 7 参考

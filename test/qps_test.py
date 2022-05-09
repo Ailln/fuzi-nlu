@@ -1,36 +1,27 @@
-import time
-
-import socketio
-from locust import HttpUser, TaskSet, task, between, events
+from locust import HttpUser, task, between, tag
 
 
-class SendMsg(TaskSet):
-    wait_time = between(1, 2)
+class MyUser(HttpUser):
+    host = "http://127.0.0.1:8081"
+    wait_time = between(0.1, 0.5)
 
-    def __init__(self, parent):
-        super().__init__(parent)
-        self.sio = socketio.Client()
-
-    def on_start(self):
-        self.sio.connect("http://127.0.0.1:8080/")
-
-    def on_quit(self):
-        self.sio.disconnect()
-
+    @tag("nlu")
     @task(1)
-    def send_message(self):
-        start_at = time.time()
-        body = "你好"
-        self.sio.emit("chat-request", body)
-        events.request_success.fire(
-            request_type="WebSocket Sent",
-            name="send 你好",
-            response_time=int((time.time() - start_at)*1000000),
-            response_length=len(body),
-        )
+    def nlu_request(self):
+        post_data = {
+            "question": "你好"
+        }
+        with self.client.post('/nlu', json=post_data, catch_response=True) as response:
+            if response.status_code == 200:
+                response.success()
+            else:
+                response.failure("Got wrong response")
 
-
-class ManyUser(HttpUser):
-    tasks = [SendMsg]
-    min_wait = 0
-    max_wait = 100
+    @tag("questions")
+    @task(1)
+    def questions_request(self):
+        with self.client.get('/questions', catch_response=True) as response:
+            if response.status_code == 200:
+                response.success()
+            else:
+                response.failure("Got wrong response")
