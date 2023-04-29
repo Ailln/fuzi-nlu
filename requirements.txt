@@ -1,4 +1,4 @@
-torch==1.6.0
+torch==1.13.1
 numpy>=1.14.5
 ruamel.yaml==0.16.5
 torchmetrics==0.7.2
